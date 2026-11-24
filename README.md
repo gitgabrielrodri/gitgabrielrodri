@@ -1,4 +1,4 @@
-# Gabriel Rodrigues
+<img width="2048" height="768" alt="Sem título" src="https://github.com/user-attachments/assets/773a78bf-0a23-4a99-b11d-3da0faede0f2" />
 
 ### Software Developer · Systems Engineer · Technology Enthusiast
 
@@ -23,7 +23,7 @@ I enjoy understanding complex systems, designing clean solutions, and exploring 
 
 **Languages & Backend**
 
-Python · JavaScript · Go · FastAPI
+Python · JavaScript · SQL · FastAPI
 
 **ERP & Integration**
 
