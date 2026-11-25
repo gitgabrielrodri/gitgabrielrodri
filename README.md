@@ -1,4 +1,4 @@
-<img width="2048" height="768" alt="Sem título" src="https://github.com/user-attachments/assets/773a78bf-0a23-4a99-b11d-3da0faede0f2" />
+<img width="2048" height="768" alt="fastfetch banner" src="./github_banner.svg" />
 
 ### Software Developer · Systems Engineer · Technology Enthusiast
 
