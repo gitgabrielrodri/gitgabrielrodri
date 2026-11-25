@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470">
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="75" y1="143" x2="305" y2="373">
+      <stop offset="0%" stop-color="#89b4fa">
+        <animate attributeName="stop-color" values="#89b4fa;#cba6f7;#94e2d5;#89b4fa" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#cba6f7">
+        <animate attributeName="stop-color" values="#cba6f7;#94e2d5;#89b4fa;#cba6f7" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="typing">
+      <rect x="0" y="50" height="30" width="140">
+        <animate attributeName="width" begin="0.3s" dur="0.9s" fill="freeze" calcMode="discrete"
+          values="140;148;156;165;173;182;190;198;207;215;600"/>
+      </rect>
+    </clipPath>
+
+    <style>
+      text { font-family: 'JetBrains Mono','Fira Code','Cascadia Code',Consolas,Menlo,monospace; font-size: 14px; }
+      .t  { fill: #cdd6f4; }
+      .k  { fill: #89b4fa; font-weight: 700; }
+      .d  { fill: #6c7086; }
+      .u  { fill: #89b4fa; font-weight: 700; }
+      .h  { fill: #cba6f7; font-weight: 700; }
+      .p  { fill: #a6e3a1; font-weight: 700; }
+
+      .in { opacity: 0; animation: fadeIn .45s ease-out forwards; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: translateX(0); } }
+
+      .logo { opacity: 0; animation: fade .8s ease-out 1.2s forwards; }
+      @keyframes fade { to { opacity: 1; } }
+
+      .hex { stroke-dasharray: 690; animation: draw 7s ease-in-out infinite; }
+      @keyframes draw {
+        0%       { stroke-dashoffset: 690; }
+        35%, 70% { stroke-dashoffset: 0; }
+        100%     { stroke-dashoffset: -690; }
+      }
+
+      .bl { animation: left 3s ease-in-out infinite; }
+      .br { animation: right 3s ease-in-out infinite; }
+      @keyframes left  { 0%,100% { transform: translateX(0); } 50% { transform: translateX(-9px); } }
+      @keyframes right { 0%,100% { transform: translateX(0); } 50% { transform: translateX(9px); } }
+
+      .slash { animation: pulse 1.5s ease-in-out infinite; }
+      @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+
+      .cursor { animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 0%,50% { opacity: 1; } 50.01%,100% { opacity: 0; } }
+    </style>
+  </defs>
+
+  <!-- Janela do terminal -->
+  <rect x="10" y="10" width="880" height="450" rx="12" fill="#1e1e2e" stroke="#313244"/>
+  <path d="M10 22 a12 12 0 0 1 12 -12 h856 a12 12 0 0 1 12 12 v24 h-880 z" fill="#181825"/>
+  <circle cx="34" cy="28" r="6" fill="#f38ba8"/>
+  <circle cx="54" cy="28" r="6" fill="#f9e2af"/>
+  <circle cx="74" cy="28" r="6" fill="#a6e3a1"/>
+  <text x="450" y="33" text-anchor="middle" class="d">fastfetch — @gitgabrielrodri: ~</text>
+
+  <!-- Prompt digitando -->
+  <text x="30" y="72" clip-path="url(#typing)" xml:space="preserve"><tspan class="p">@gitgabrielrodri</tspan><tspan class="t">:~$ </tspan><tspan class="t">fastfetch</tspan></text>
+
+  <!-- Logo animado -->
+  <g class="logo">
+    <!-- órbita -->
+    <circle cx="190" cy="258" r="140" fill="none" stroke="#313244" stroke-dasharray="2 8"/>
+    <circle r="4" fill="#94e2d5" filter="url(#glow)">
+      <animateMotion dur="8s" repeatCount="indefinite" path="M190,118 a140,140 0 1,1 0,280 a140,140 0 1,1 0,-280"/>
+    </circle>
+    <circle r="3" fill="#f5c2e7" filter="url(#glow)">
+      <animateMotion dur="8s" begin="-2.7s" repeatCount="indefinite" path="M190,118 a140,140 0 1,1 0,280 a140,140 0 1,1 0,-280"/>
+    </circle>
+    <circle r="3.5" fill="#f9e2af" filter="url(#glow)">
+      <animateMotion dur="8s" begin="-5.3s" repeatCount="indefinite" path="M190,118 a140,140 0 1,1 0,280 a140,140 0 1,1 0,-280"/>
+    </circle>
+
+    <!-- hexágono -->
+    <polygon points="190,143 289.6,200.5 289.6,315.5 190,373 90.4,315.5 90.4,200.5"
+      fill="none" stroke="#313244" stroke-width="3" stroke-linejoin="round"/>
+    <polygon class="hex" points="190,143 289.6,200.5 289.6,315.5 190,373 90.4,315.5 90.4,200.5"
+      fill="none" stroke="url(#g)" stroke-width="4" stroke-linejoin="round" filter="url(#glow)"/>
+
+    <!-- </> -->
+    <g fill="none" stroke="url(#g)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+      <polyline class="bl" points="160,223 125,258 160,293"/>
+      <polyline class="br" points="220,223 255,258 220,293"/>
+      <line class="slash" x1="207" y1="213" x2="173" y2="303"/>
+    </g>
+  </g>
+
+  <!-- Informações -->
+  <text x="380" y="104" class="in" style="animation-delay:1.4s"><tspan class="u">dev</tspan><tspan class="t">@</tspan><tspan class="h">github</tspan></text>
+  <text x="380" y="124" class="in t" style="animation-delay:1.5s">----------</text>
+
+  <text x="380" y="148" class="in" style="animation-delay:1.6s"><tspan class="k">OS</tspan><tspan class="t">: Software Development</tspan></text>
+  <text x="380" y="170" class="in" style="animation-delay:1.7s"><tspan class="k">Kernel</tspan><tspan class="t">: Backend Development </tspan><tspan class="d">(APIs, services, logic)</tspan></text>
+  <text x="380" y="192" class="in" style="animation-delay:1.8s"><tspan class="k">DE</tspan><tspan class="t">: Frontend Development </tspan><tspan class="d">(responsive UI)</tspan></text>
+  <text x="380" y="214" class="in" style="animation-delay:1.9s"><tspan class="k">Shell</tspan><tspan class="t">: RESTful API Development</tspan></text>
+  <text x="380" y="236" class="in" style="animation-delay:2.0s"><tspan class="k">Disk</tspan><tspan class="t">: Database Management </tspan><tspan class="d">(SQL / NoSQL)</tspan></text>
+  <text x="380" y="258" class="in" style="animation-delay:2.1s"><tspan class="k">CPU</tspan><tspan class="t">: Object-Oriented Programming (OOP)</tspan></text>
+  <text x="380" y="280" class="in" style="animation-delay:2.2s"><tspan class="k">Theme</tspan><tspan class="t">: Clean Code &amp; SOLID Principles</tspan></text>
+  <text x="380" y="302" class="in" style="animation-delay:2.3s"><tspan class="k">Packages</tspan><tspan class="t">: Git &amp; Version Control </tspan><tspan class="d">(branch, merge, PR)</tspan></text>
+  <text x="380" y="324" class="in" style="animation-delay:2.4s"><tspan class="k">GPU</tspan><tspan class="t">: Problem Solving </tspan><tspan class="d">@ 100%</tspan></text>
+  <text x="380" y="346" class="in" style="animation-delay:2.5s"><tspan class="k">WM</tspan><tspan class="t">: Software Architecture</tspan></text>
+  <text x="380" y="368" class="in" style="animation-delay:2.6s"><tspan class="k">Memory</tspan><tspan class="t">: Debugging &amp; Optimization </tspan><tspan class="d">(leaks: 0 MiB)</tspan></text>
+  <text x="380" y="390" class="in" style="animation-delay:2.7s"><tspan class="k">Uptime</tspan><tspan class="t">: Continuous Learning </tspan><tspan class="d">(∞)</tspan></text>
+
+  <!-- Paleta de cores -->
+  <g class="in" style="animation-delay:2.9s">
+    <rect x="380" y="404" width="24" height="16" fill="#45475a"/>
+    <rect x="404" y="404" width="24" height="16" fill="#f38ba8"/>
+    <rect x="428" y="404" width="24" height="16" fill="#a6e3a1"/>
+    <rect x="452" y="404" width="24" height="16" fill="#f9e2af"/>
+    <rect x="476" y="404" width="24" height="16" fill="#89b4fa"/>
+    <rect x="500" y="404" width="24" height="16" fill="#cba6f7"/>
+    <rect x="524" y="404" width="24" height="16" fill="#94e2d5"/>
+    <rect x="548" y="404" width="24" height="16" fill="#bac2de"/>
+  </g>
+
+  <!-- Prompt final com cursor -->
+  <g class="in" style="animation-delay:3.1s">
+    <text x="30" y="446" xml:space="preserve"><tspan class="p">Gabriel Rodrigues</tspan><tspan class="t">:~$ </tspan></text>
+    <rect class="cursor" x="148" y="434" width="9" height="16" fill="#cdd6f4"/>
+  </g>
+</svg>
